@@ -26,6 +26,6 @@ class VersionManager_getThreadLocalInputSettings
 getThreadLocalInputSettings()    {
     static SPI_GETTHREADLOCALINPUTSETTINGS:=0x104E
     return format("{3}", varSetCapacity(pThreadLocalInputSettings, A_PtrSize, 0)
-        ,dllCall("User32.dll\SystemParametersInfo", "UInt",SPI_GETTHREADLOCALINPUTSETTINGS, "UInt",0, "Ptr",&pThreadLocalInputSettings, "UInt",0)
+        ,dllCall("User32.dll\SystemParametersInfo", "UInt",SPI_GETTHREADLOCALINPUTSETTINGS, "UInt",0, "Ptr",&pThreadLocalInputSettings, "UInt",0, "Int")
         ,(errorLevel?false:numGet(&pThreadLocalInputSettings, 0, "Ptr")))
 }
