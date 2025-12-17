@@ -1,4 +1,4 @@
-﻿#Include AutoHotkey v1.1.17+
+﻿#Requires AutoHotkey v1.1.17+
 ;==============================================================
 ; getThreadLocalInputSettings — Query per-thread keyboard input settings via SystemParametersInfo
 ;
